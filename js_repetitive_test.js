@@ -245,7 +245,7 @@ function quizModeChange(){
     } 
 
     const containerHtml = (quizMode==='prediction')?
-            `<h4 style="margin-bottom:10px;">問題: ソースコードを参考に、予想される表示結果を入力してください</h4>
+            `<h4 style="margin-bottom:10px;">問題: ソースコードを読んで、予想される表示結果を入力してください</h4>
             <div style="display: flex; gap: 10px;height:95%">
                 <div style="flex: 2;padding: 10px 10px; border: 2px solid #ccc;background:white;border-radius: 10px;">
                     <h4>ソースコード:</h4>
