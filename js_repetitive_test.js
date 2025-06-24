@@ -245,8 +245,8 @@ function quizModeChange(){
     } 
 
     const containerHtml = (quizMode==='prediction')?
-            `<h4>問題: ソースコードを参考に、予想される表示結果を入力してください</h4>
-            <div style="display: flex; gap: 10px;height:89%">
+            `<h4 style="margin-bottom:10px;">問題: ソースコードを参考に、予想される表示結果を入力してください</h4>
+            <div style="display: flex; gap: 10px;height:95%">
                 <div style="flex: 2;padding: 10px 10px; border: 2px solid #ccc;background:white;border-radius: 10px;">
                     <h4>ソースコード:</h4>
                     <div id="html-source" style="white-space: pre-wrap;;max-height:400px;overflow-y:auto;"></div>
@@ -254,7 +254,7 @@ function quizModeChange(){
                 <div style="flex: 1;padding: 10px 10px; border: 2px solid #ccc;background:white;border-radius: 10px;">
                     <h4>予想される表示結果:</h4>
                     <div style="height:100%;">
-                        <textarea id="html-input" style="border:1;height:80%;overflow-y:auto;"></textarea>            
+                        <textarea id="html-input" style="border:1;height:95%;overflow-y:auto;"></textarea>            
                     </div>
                 </div>
                 <div style="flex: 1;padding: 10px 10px; border: 2px solid #ccc;background:white;border-radius: 10px;">
@@ -264,8 +264,8 @@ function quizModeChange(){
                     </div>
                 </div>
             </div>`:
-            `<h4>問題: 表示結果を参考に、ソースコードの空欄を埋めてください</h4>
-            <div style="display: flex; gap: 10px;height:89%">
+            `<h4 style="margin-bottom:10px;">問題: 表示結果を参考に、ソースコードの空欄を埋めてください</h4>
+            <div style="display: flex; gap: 10px;height:95%">
                 <div style="flex: 1;padding: 10px 10px; border: 2px solid #ccc;background:white;border-radius: 10px;">
                     <h4>表示結果:</h4>
                     <div style="height:100%;">
