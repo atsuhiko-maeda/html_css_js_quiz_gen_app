@@ -79,8 +79,8 @@
             background: linear-gradient(45deg, #667eea, #764ba2);
             color: white;
             border: none;
-            padding: 10px 27px;
-            border-radius: 23px;
+            padding: 10px 15px;
+            border-radius: 30px;
             cursor: pointer;
             font-size: 14px;
             font-weight: bold;
@@ -95,8 +95,8 @@
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
-            padding: 10px 27px;
-            border-radius: 23px;
+            padding: 10px 15px;
+            border-radius: 30px;
             cursor: pointer;
             font-size: 14px;
             font-weight: bold;
@@ -151,17 +151,17 @@
 <body onload="init()">
   <span id="achieved">100点</span>
   <div class="grid-container" style="padding:10px;border-radius:10px;height:92vh">
-    <div class="grid-item" style="background:white;">
-        <select id="exercises" onchange="setMaterial()">
+    <div class="grid-item" style="background:white;display:flex;">
+        <select id="exercises" onchange="setMaterial()" style="margin-right:auto;">
             <option value="">--出題分野を選択--</option>
         </select>
         <input type="text" id="random_seed" style="width:10ch;visibility: hidden;"/>
-        <button style="margin-left: 100px;" id="checkAnswer">答え合わせ</button>
-        <button id="nextQuestion">次の問題</button>
+        <button style="margin-left: 10px;margin-right: 5px;" id="checkAnswer">答え合わせ</button>
+        <button  style="margin-left: 5px;margin-right: 20px;" id="nextQuestion">次の問題</button>
     </div>
     <div class="grid-item">
-        目標スコア: <input type="number" name="target_score" id="target_score" value="100" style="width:3em"/>
-        <button id="getScoreLog" type="button" class="mybutton">スコア記録をダウンロード</button>
+        <span style="margin-left:15px;">目標スコア: </span><input type="number" name="target_score" id="target_score" value="100" style="width:3em"/>
+        <button id="getScoreLog">記録をダウンロード</button>
     </div>
     <div class="grid-item">
         <div class="container" id="container" style="height:78vh;flex:1;border:2px solid #ccc;background:white;">
