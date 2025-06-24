@@ -10,7 +10,7 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* max-width: 1200px; */
+            /* min-width: 1024px; */
             margin: 0 auto;
             padding: 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -111,6 +111,13 @@
             font-weight: bold;             */
         }
 
+        optgroup {
+            color: black;
+            font-weight: bold;
+            /* font-size: 14px; */
+                        
+        }
+
         button:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
@@ -157,20 +164,22 @@
 <body onload="init()">
   <span id="achieved">100点</span>
   <div class="grid-container" style="padding:10px;border-radius:10px;height:92vh">
-    <div class="grid-item" style="background:white;display:flex;">
+    <div class="grid-item" style="background:white;">
+        <div style="display:flex">
         <select id="exercises" onchange="setMaterial()" style="margin-right:auto;">
             <option value="">--出題分野を選択--</option>
         </select>
         <input type="text" id="random_seed" style="width:10ch;visibility: hidden;"/>
         <button style="margin-left: 10px;margin-right: 5px;" id="checkAnswer">答え合わせ</button>
         <button  style="margin-left: 5px;margin-right: 20px;" id="nextQuestion">次の問題</button>
+        </div>
     </div>
     <div class="grid-item">
         <span style="margin-left:15px;">目標スコア: </span><input type="number" name="target_score" id="target_score" value="100" style="width:3em"/>
         <button id="getScoreLog">記録をダウンロード</button>
     </div>
     <div class="grid-item">
-        <div class="container" id="container" style="height:78vh;flex:1;border:2px solid #ccc;background:white;">
+        <div class="container" id="container" style="height:70vh;flex:1;border:2px solid #ccc;background:white;">
             <h4>問題: 表示結果を参考に、ソースコードの空欄を埋めてください</h4>            
             <div style="display: flex; gap: 10px;height:89%">
                 <div style="flex: 1;padding: 10px 10px; border: 2px solid #ccc;background:white;border-radius: 10px;">
@@ -187,7 +196,7 @@
         </div>            
     </div>
     <div class="grid-item">
-        <div style="padding-left: 10px;height:78vh">
+        <div style="padding-left: 10px;height:70vh">
             <div style="height:100%;border: 2px solid #ccc; padding: 10px;border-radius: 10px;">
                 <h4>スコア記録: </h4>
                 <div id="score_log" style="white-space: pre-wrap;max-height: 85%; overflow-y: auto;"></div>
