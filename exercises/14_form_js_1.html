@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<script>
+//<!-- meta[blank]: p="1.0" candidates=["function func01()","\"func01()\""] -->
+//<!-- meta[blank]: p="1.0" candidates=["jsform.tbox1.value","name=\"tbox1\""] -->
+//<!-- meta[replaceWord]: p="1.0" target="tbox1" with=["hoge","fuga","piyo"] -->
+//<!-- meta[replaceWord]: p="1.0" target="jsform" with=["foo","bar","baz"] -->
+//<!-- meta[replaceWord]: p="1.0" target="func01" with=["qux","quux","corge"] -->
+		function func01(){
+			var str1 = document.jsform.tbox1.value;
+//<!-- meta[replace]: p="1.0" target="=str1" with=["=str1","=\"長さ:\"+str1.length","=\"こんにちは，\"+str1"] -->
+			document.getElementById("output").innerHTML=str1;			
+//<!-- /meta[replace] --> 
+		}
+	</script>
+</head>
+<body>
+	<form name="jsform">
+		<input type="text" name="tbox1" value=""><br>
+		<input type="button" value="ボタン" onclick="func01()">
+<!-- /meta[replaceWord] -->
+<!-- /meta[replaceWord] -->
+<!-- /meta[replaceWord] -->
+<!-- /meta[blank] --> 
+<!-- /meta[blank] --> 
+	</form>
+	<div id="output"></div>
+</body>
+</html>

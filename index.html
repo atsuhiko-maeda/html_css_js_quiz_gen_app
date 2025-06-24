@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML, CSS, JS問題生成アプリ</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+    <script src="HTMLMetaParser.js"></script>
+    <script src="js_repetitive_test.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* max-width: 1200px; */
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }    
+        .grid-container {
+            display: grid;
+            grid-template-columns: 70% 30%;
+            grid-template-rows: 10wh 90wh;
+
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .grid-item:nth-child(1) {
+            grid-row: 1/2;
+            grid-column: 1/2;
+        }
+        .grid-item:nth-child(2) {
+            grid-row: 1/2;
+            grid-column: 2/3;
+        }
+        .grid-item:nth-child(3) {
+            grid-row: 2/3;
+            grid-column: 1/2;
+        }
+        .grid-item:nth-child(4) {
+            grid-row: 2/3;
+            grid-column: 2/3;
+        }
+        .container {
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            /* box-shadow: 0 20px 40px rgba(0,0,0,0.1); */
+        }
+
+        #achieved {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 200px;
+            font-weight: bold;
+            line-height: 1;
+            z-index: 2;
+            pointer-events: none;
+            color: #ffb3b3;
+            opacity: 0.7;
+            visibility:hidden;
+        }
+        
+        .input-section, .output-section {
+            margin-bottom: 10px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+                
+        button    {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 10px 0;
+        }
+        
+        select {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 10px 0;
+            
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        /* より自然な光る効果 */
+        .glow-red-natural {
+            box-shadow: 
+                0 0 5px rgba(255, 0, 0, 0.5),
+                0 0 10px rgba(255, 0, 0, 0.3),
+                0 0 15px rgba(255, 0, 0, 0.2);
+            border-color: #f44336;
+        }
+
+        .glow-green-natural {
+            box-shadow: 
+                0 0 5px rgba(0, 255, 0, 0.5),
+                0 0 10px rgba(0, 255, 0, 0.3),
+                0 0 15px rgba(0, 255, 0, 0.2);
+            border-color: #4CAF50;
+        }
+
+        .results {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        #html-input {
+            font-size: 18px;
+            /* font-weight: bold; */
+        }
+    </style>
+</head>
+<body onload="init()">
+  <span id="achieved">100点</span>
+  <div class="grid-container" style="padding:10px;border-radius:10px;height:92vh">
+    <div class="grid-item" style="background:white;">
+        <select id="exercises" onchange="setMaterial()">
+            <option value="">--出題分野を選択--</option>
+        </select>
+        <input type="text" id="random_seed" style="width:10ch;visibility: hidden;"/>
+        <button style="margin-left: 200px;" id="checkAnswer">答え合わせ</button>
+        <button id="nextQuestion">次の問題</button>
+    </div>
+    <div class="grid-item">
+        目標スコア: <input type="number" name="target_score" id="target_score" value="100" style="width:3em"/>
+        <button id="getScoreLog" type="button" class="mybutton">スコア記録をダウンロード</button>
+    </div>
+    <div class="grid-item">
+        <div class="container" id="container" style="height:78vh;flex:1;border:2px solid #ccc;background:white;">
+            <h4>問題: 表示結果を参考に、ソースコードの空欄を埋めてください</h4>            
+            <div style="display: flex; gap: 10px;height:89%">
+                <div style="flex: 1;padding: 10px 10px; border: 2px solid #ccc;background:white;border-radius: 10px;">
+                    <h4>表示結果:</h4>
+                    <div style="height:100%;">
+                        <iframe id="html-preview" style="border:0;height:80%;overflow-y:auto;"></iframe>            
+                    </div>
+                </div>
+                <div style="flex: 2;padding: 10px 10px; border: 2px solid #ccc;background:white;border-radius: 10px;">
+                    <h4>ソースコード:</h4>
+                    <div id="html-source" style="white-space: pre-wrap;;max-height:400px;overflow-y:auto;"></div>
+                </div>
+            </div>            
+        </div>            
+    </div>
+    <div class="grid-item">
+        <div style="padding-left: 10px;height:78vh">
+            <div style="height:100%;border: 2px solid #ccc; padding: 10px;border-radius: 10px;">
+                <h4>スコア記録: </h4>
+                <div id="score_log" style="white-space: pre-wrap;max-height: 85%; overflow-y: auto;"></div>
+                <!-- <textarea style="height:85%;width: 89%; resize: none; border: 1px solid #ccc; padding: 10px;" disabled id="score_log"></textarea> -->
+            </div>
+        </div>
+    </div>
+  </div>
+
+</body>
+</html>

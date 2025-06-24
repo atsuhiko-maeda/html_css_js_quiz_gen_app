@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>タイトル</title>
+	<script>
+
+		//Idea: {{input type="text=" data-answer="foo" style="width:5ch"}}などとfooを置換する前に書いてしまうと
+		//他の部分も置換してしまう可能性が出てくるため，下記のように最初は最小限に表現しておき，
+		//一番最後に<input type...に置換するように修正する
+		//"{{foo}}"
+
+		//上下を逆にするコマンドを実装する
+		//swap
+		//before, after
+
+		//blank function,"{", "}", 
+		function foo(x,y){
+			if (x>y)
+				return x;
+			else
+				return y;
+		}
+
+		function foo(x,y){
+			var s=0;
+			for (var i=0 ; i<x.length ; i++){
+				if (x[i]%2==0){
+					s++;
+				}		
+			}
+			return s;
+		}
+
+		function foo(x){
+			var s=0;
+			for (var i=0 ; i<x.length ; i++){
+				s+=x[i];
+			}
+			s/=x.length;
+				return s;
+		}
+
+		function foo(x){
+			var s=0;
+			for (var i=0 ; i<x.length ; i++){
+				if (x[i]%2==0 && x[i]%3==0)
+					s+=x[i];				
+			}
+			return s;
+		}
+
+		function foo(x){
+			var s=0;
+			for (var i=0 ; i<x.length ; i++){
+				if (x[i]%2==0)
+					if (x[i]%3==0)
+						s+=x[i];				
+			}
+			return s;
+		}
+
+		function foo(x){
+			for (var i=0 ; i<x.length ; i++){
+					x[i]=x[i]*2;				
+			}
+			return x;
+		}
+
+		// select
+		// option
+		// var x = 1, y = 2;
+		// option
+		var x = y = 2;
+		// option
+		var x = 1;
+		var y = 2;
+		// select
+
+		// alert(x+" "+y);
+		var z = foo(1,2);
+
+		document.write(z);
+</script>
+</head>
+<body>
+</body>
+</html>

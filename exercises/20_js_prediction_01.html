@@ -1,0 +1,77 @@
+<!-- meta[predictProgramExecution] /-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script>
+// <!-- meta[select] -->
+// <!-- meta[option] -->
+	// <!-- meta[replaceWord]: p="1.0" target="x" with=["a","x","i"] -->
+	var x = 0;
+	x+=2;
+	document.write(x);
+	// <!-- /meta[replaceWord] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[replaceWord]: p="1.0" target="1" with=["1","2","3"] -->
+	// <!-- meta[replaceWord]: p="1.0" target="2" with=["4","5","6"] -->
+	var x = 1;
+	var y = "2.3";
+	// <!-- meta[replace]: p="1.0" target="+y" with=["+y", "+parseInt(y)","+parseFloat(y)"] -->
+	var z = x+y;
+	// <!-- /meta[replace] -->
+	document.write(z);
+	// <!-- /meta[replaceWord] -->
+	// <!-- /meta[replaceWord] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[replaceWord]: p="1.0" target="1" with=["1","2","3"] -->
+	var x = 1;
+	// <!-- /meta[replaceWord] -->
+	// <!-- meta[includeBlock]: p="0.5" -->
+	x++;
+	// <!-- /meta[includeBlock] -->
+	// <!-- meta[includeBlock]: p="0.5" -->
+	x--;
+	// <!-- /meta[includeBlock] -->
+	// <!-- meta[includeBlock]: p="0.5" -->
+	x++;
+	// <!-- /meta[includeBlock] -->
+	// <!-- meta[replace]: p="1.0" target="+=" with=["-=","+=","*="] -->
+	// <!-- meta[replace]: p="1.0" target="2" with=["1","2","3"] -->
+	x+=2;
+	// <!-- /meta[replace] -->
+	// <!-- /meta[replace] -->
+	document.write(x);
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	var s1 = "aiueo";
+	var s2 = "AIUEO";
+	var ss = s1+s2;
+	// <!-- meta[replace]: p="1.0" target="1" with=["0","1","2","3","4","5","6","7","8","9"] -->
+	document.write(ss[1]+"<br>");
+	// <!-- /meta[replace] -->
+	document.write(ss.length);
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[select] -->
+		// <!-- meta[option] -->
+var a = new Array("a","i","u","e","o");
+		// <!-- /meta[option] -->
+		// <!-- meta[option] -->
+var a = Array("a","i","u","e","o");
+		// <!-- /meta[option] -->
+		// <!-- meta[option] -->
+var a = ["a","i","u","e","o"];
+		// <!-- /meta[option] -->
+	// <!-- /meta[select] -->
+// <!-- meta[replace]: p="1.0" target="1" with=["0","1","2","3","4"] -->
+document.write(a[1]+"<br>");
+// <!-- /meta[replace] -->
+document.write(a.length);
+// <!-- /meta[option] -->
+// <!-- /meta[select] -->
+</script>
+</head>
+<body></body>
+</html>

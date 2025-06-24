@@ -1,0 +1,216 @@
+<!-- meta[select] -->
+<!-- meta[option] -->
+	<!-- meta[replaceAndBlank]: p="1.0" target="<" with=["&lt;"] -->
+	<!-- meta[replaceAndBlank]: p="1.0" target=">" with=["&gt;"] -->
+	<!-- meta[select] -->
+	<!-- meta[option] -->
+	<h1>ヘッダー1</h1>
+	<!-- /meta[option] -->
+	<!-- meta[option] -->
+	<h2>ヘッダー2</h2>
+	<!-- /meta[option] -->
+	<!-- meta[option] -->
+	<h3>ヘッダー3</h3>
+	<!-- /meta[option] -->
+	<!-- meta[option] -->
+	<h4>ヘッダー4</h4>
+	<!-- /meta[option] -->
+	<!-- meta[option] -->
+	<!-- meta[replace]: p="1.0" target="example.com" with=["example.com","kait.jp","yahoo.co.jp","google.co.jp"] -->
+	<a href="https://example.com" target="_blank">example.comへのリンク</a>
+	<!-- /meta[replace] -->
+	<!-- /meta[option] -->
+	<!-- /meta[select] -->	 
+	<!-- /meta[replaceAndBlank] -->
+	<!-- /meta[replaceAndBlank] -->
+<!-- /meta[option] -->
+<!-- meta[option] -->
+	<!-- meta[includeBlock]: p="0.2" -->
+	<h1>ヘッダー1</h1>
+	<!-- /meta[includeBlock] -->
+	<!-- meta[includeBlock]: p="0.2" -->
+	<h2>ヘッダー2</h2>
+	<!-- /meta[includeBlock] -->
+	<!-- meta[includeBlock]: p="0.2" -->
+	<h3>ヘッダー3</h3>
+	<!-- /meta[includeBlock] -->
+	<!-- meta[includeBlock]: p="0.2" -->
+	<h4>ヘッダー4</h4>
+	<!-- /meta[includeBlock] -->
+	<!-- meta[includeBlock]: p="0.2" -->
+	<p>パラグラフ．パラグラフ．パラグラフ</p>
+	<!-- /meta[includeBlock] -->
+	<!-- meta[includeBlock]: p="0.2" -->
+	<p>パラグラフ．パラグラフ．<br>パラグラフ．パラグラフ．</p>
+	<!-- /meta[includeBlock] -->
+	<!-- meta[includeBlock]: p="0.5" -->
+	<!-- meta[replace]: p="1.0" target="example.com" with=["example.com","kait.jp","yahoo.co.jp","google.co.jp"] -->
+	<a href="https://example.com" target="_blank">example.comへのリンク</a>
+	<!-- /meta[replace] -->
+	<!-- /meta[includeBlock] -->
+	<!-- meta[blank]: p="1.0" candidates=["\<\!--"] -->
+	<!-- meta[blank]: p="1.0" candidates=["--\>"] -->
+	<!-- 
+	<!-- meta[select] -->
+	<!-- meta[option] -->
+	<h1>ヘッダー1</h1>
+	<!-- /meta[option] -->
+	<!-- meta[option] -->
+	<h2>ヘッダー2</h2>
+	<!-- /meta[option] -->
+	<!-- meta[option] -->
+	<p>パラグラフ．パラグラフ．パラグラフ</p>
+	<!-- /meta[option] -->
+	<!-- meta[option] -->
+	<!-- meta[replace]: p="1.0" target="example.com" with=["example.com","kait.jp","yahoo.co.jp","google.co.jp"] -->
+	<a href="https://example.com" target="_blank">example.comへのリンク</a>
+	<!-- /meta[replace] -->
+	<!-- /meta[option] -->
+	<!-- /meta[select] -->
+	-->
+	<!-- /meta[blank] -->
+	<!-- /meta[blank] -->
+<!-- /meta[option] -->
+<!-- meta[option] -->
+	<!-- meta[replace]: p="1.0" target="skyblue" with=["MediumTurquoise","MintCream","LightCyan", "LightBlue"] -->
+	<!-- meta[replace]: p="1.0" target="pink" with=["DarkSalmon","LavenderBlush","LemonChiffon", "Linen"] -->
+	<html>
+	<head><style>
+		th{ background: skyblue }
+		td{ background: pink }
+	</style></head>
+	<!-- /meta[replace] -->
+	<!-- /meta[replace] -->
+	<body>
+		<table border="1">
+	<!-- meta[blankWord]: p="0.5" candidates=["td"] -->
+	<!-- meta[blankWord]: p="0.5" candidates=["tr"] -->
+		<!-- meta[includeBlock]: p="0.8"-->
+			<!-- meta[blankWord]: candidates=["th"] -->
+		<tr>
+			<th>ヘッダ</th>
+			<th>ヘッダ</th>
+			<th>ヘッダ</th>
+		</tr>
+			<!-- /meta[blankWord] -->
+		<!-- /meta[includeBlock] -->
+		<tr>
+			<td>データ1</td>
+			<td>データ2</td>
+			<td>データ3</td>
+		</tr>
+		<!-- meta[includeBlock]: p="0.5"-->
+		<tr>
+			<td>データA</td>
+			<td>データB</td>
+			<td>データC</td>
+		</tr>	
+		<!-- /meta[includeBlock] -->
+	<!-- /meta[blankWord] -->
+	<!-- /meta[blankWord] -->
+		</table>
+	</body>
+	</html>
+<!-- /meta[option] -->
+<!-- meta[option] -->
+	<!-- meta[replace]: p="1.0" target="skyblue" with=["MediumTurquoise","MintCream","LightCyan", "LightBlue"] -->
+	<!-- meta[replace]: p="1.0" target="pink" with=["DarkSalmon","LavenderBlush","LemonChiffon", "Linen"] -->
+	<html>
+	<head><style>
+		th{ background: skyblue }
+		td{ background: pink }
+	</style></head>
+	<!-- /meta[replace] -->
+	<!-- /meta[replace] -->
+	<body>
+	<table border="1">
+	<!-- meta[blankWord]: p="0.5" candidates=["td"] -->
+	<!-- meta[blankWord]: p="0.5" candidates=["tr"] -->
+		<!-- meta[includeBlock]: p="0.8"-->
+		<!-- meta[blankWord]: candidates=["th"] -->
+		<tr>
+			<th>ヘッダ</th>
+			<th>ヘッダ</th>
+			<th>ヘッダ</th>
+		</tr>
+		<!-- /meta[blankWord] -->
+		<!-- /meta[includeBlock] -->
+		<tr>
+			<th>ヘッダ</th>
+			<td>データ1</td>
+			<td>データ2</td>
+		</tr>
+		<!-- meta[includeBlock]: p="0.5"-->
+		<tr>
+			<th>ヘッダ</th>
+			<td>データA</td>
+			<td>データB</td>
+		</tr>	
+		<!-- /meta[includeBlock] -->
+	<!-- /meta[blankWord] -->
+	<!-- /meta[blankWord] -->
+	</table>
+	</body>
+	</html>
+<!-- /meta[option] -->
+<!-- meta[option] -->
+<!-- meta[blank]: p="0.5" candidates=["form","button","checked"] -->
+<form name="hoge">
+<!-- meta[includeBlock]: p="0.2" -->
+<!-- meta[blank]: p="1.0" candidates=["input","text"] -->
+	<p>
+	item1: <input type="text" name="tbox1" value="未設定"><br>
+	item2: <input type="text" name="tbox2"><br>
+	</p>	
+<!-- /meta[blank] -->
+<!-- /meta[includeBlock] -->
+<!-- meta[includeBlock]: p="0.2" -->
+<!-- meta[blank]: p="1.0" candidates=["checkbox"] -->
+	<p>
+	<!-- meta[flip]: p="0.5" -->
+	 <!-- meta[element] -->
+	<input type="checkbox" name="fruits" value="apple" checked>apple
+	 <!-- /meta[element] -->
+	 <!-- meta[element] -->
+	<input type="checkbox" name="fruits" value="orange">orange
+	 <!-- /meta[element] -->
+	 <!-- meta[element] -->
+	<input type="checkbox" name="fruits" value="banana">banana
+	 <!-- /meta[element] -->
+	<!-- /meta[flip] -->
+	</p>
+<!-- /meta[blank] -->
+<!-- /meta[includeBlock] -->
+<!-- meta[includeBlock]: p="0.2" -->
+<!-- meta[blank]: p="1.0" candidates=["radio"] -->
+	<p>
+	<!-- meta[flip]: p="0.5" -->
+	 <!-- meta[element] -->
+	<input type="radio" name="Q1" value="apple">apple
+	 <!-- /meta[element] -->
+	 <!-- meta[element] -->
+	<input type="radio" name="Q1" value="orange" checked>orange
+	 <!-- /meta[element] -->
+	 <!-- meta[element] -->
+	<input type="radio" name="Q1" value="banana">banana
+	 <!-- /meta[element] -->
+	<!-- /meta[flip] -->
+	</p>
+<!-- /meta[blank] -->
+<!-- /meta[includeBlock] -->
+<!-- meta[includeBlock]: p="0.2" -->
+<!-- meta[blank]: p="1.0" candidates=["select","option"] -->
+	<p>
+	<select name="tool"> 
+		<option value="item1">Item 1</option> 
+		<option value="item2">Item 2</option> 
+		<option value="item3">Item 3</option> 
+	</select>
+	</p> 		
+<!-- /meta[blank] -->
+<!-- /meta[includeBlock] -->
+	<input type="button" value="送信">
+</form>
+<!-- /meta[blank] -->
+<!-- /meta[option] -->
+<!-- /meta[select] -->

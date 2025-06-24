@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>タイトル</title>
+	<script>
+// <!-- meta[select] -->
+// <!-- meta[option] -->
+		// <!-- meta[replace]: p="1.0" target="_A_" with=["40","75","87"] -->
+		// <!-- meta[replace]: p="1.0" target="_B_" with=["80","82","90"] -->
+		// <!-- meta[replaceAndBlank]: p="1.0" target="else if" with=["else if","if"] -->
+		var x=_A_, y=_B_;
+		// <!-- meta[select] -->
+		// <!-- meta[option] -->
+		// <!-- meta[blank]: p="1.0" candidates=["&&"] -->
+		if (x>=60 && y>=60)
+			document.write("どちらも60点以上<br>");
+		else if (x>=80 || y>=80)
+			document.write("片方は80点以上<br>");
+		// <!-- /meta[blank] -->
+		// <!-- /meta[option] -->
+		// <!-- meta[option] -->
+		// <!-- meta[blank]: p="1.0" candidates=["||"] -->
+		if (x>=60 || y>=60)
+			document.write("片方は60点以上<br>");
+		else if (x>=80 || y>=80)
+			document.write("片方は80点以上<br>");
+		// <!-- /meta[blank] -->
+		// <!-- /meta[option] -->
+		// <!-- /meta[select] -->
+		// <!-- /meta[replace] -->
+		// <!-- /meta[replace] -->
+		// <!-- /meta[replace] -->
+// <!-- /meta[option] -->
+// <!-- /meta[select] -->
+	</script>
+</head>
+<body>
+</body>
+</html>

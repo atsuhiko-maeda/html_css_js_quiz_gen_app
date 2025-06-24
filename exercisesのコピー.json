@@ -1,0 +1,32 @@
+[
+    {
+        "chapter":"HTML/CSS/JS穴埋め",
+        "exercises":{
+            "10 HTMLタグ1(空欄少なめ)":"10_html_tag01_Lv1.html",
+            "11 HTMLタグ1(空欄多め)":"11_html_tag01_Lv2.html",
+            "12 HTMLタグ2":"12_html_tag02.html",
+            "13 CSSの参照規則":"13_css_ref.html",
+            "14 formとJSの連携1":"14_form_js_1.html",
+            "15 formとJSの連携2":"15_form_js_2.html",
+            "テスト用":"test.html"
+     		}            
+    },
+    {
+        "chapter":"Javascript実行結果予測",
+        "exercises":{
+            "20 算術演算":"20_js_prediction_01.html",
+            "21 コードブロック":"21_js_prediction_02.html",
+            "22 if, while, forと論理演算":"22_js_prediction_03.html",
+            "23 関数":"23_js_prediction_04.html"
+            }
+     },
+    {
+        "chapter":"Javascript穴埋め",
+        "exercises":{
+            "30 Javascript 変数・計算・Array":"30_js_var_calc_array.html",
+            "31 Javascript if文，比較演算":"31_js_if_comparison.html",
+            "32 Javascript for/while文":"32_js_for_while.html",
+            "34 Javascript prompt(), Date, String":"js_02.html"
+        	}
+    }
+]

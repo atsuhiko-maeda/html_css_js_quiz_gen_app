@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>タイトル</title>
+	<script>
+// <!-- meta[select] -->
+// <!-- meta[option] -->
+	// <!-- meta[blank]: p="1.0" candidates=["{"] -->
+		for (var i = 0 ; i < 3 ; i++){
+	// <!-- /meta[blank] -->		
+			document.write("a<br>");
+		document.write("b<br>");
+	// <!-- meta[blank]: p="1.0" candidates=["}"] -->
+		}
+	// <!-- /meta[blank] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="{" with=[""] -->
+		for (var i = 0 ; i < 3 ; i++){
+	// <!-- /meta[replaceAndBlank] -->		
+			document.write("a<br>");
+		document.write("b<br>");
+	// <!-- meta[replaceAndBlank]: p="1.0" target="}" with=[""] -->
+		}
+	// <!-- /meta[replaceAndBlank] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+		// <!-- meta[select] -->
+			// <!-- meta[option] -->
+		var a = new Array("あ","い","う","え","お");
+			// <!-- /meta[option] -->
+			// <!-- meta[option] -->
+		var a = Array("あ","い","う","え","お");
+			// <!-- /meta[option] -->
+			// <!-- meta[option] -->
+		var a = ["あ","い","う","え","お"];
+			// <!-- /meta[option] -->
+		// <!-- /meta[select] -->
+		// <!-- meta[replaceAndBlank]: p="1.0" target="0" with=["0","1","2"] -->
+		// <!-- meta[replaceAndBlank]: p="1.0" target="3" with=["3","4"] -->
+		// <!-- meta[replace]: p="1.0" target="<=" with=["<","<="] -->
+		for (var i = 0 ; i <= 3 ; i++){
+			document.write(a[i] + "<br>");
+		}
+	// <!-- /meta[replace] -->
+	// <!-- /meta[replaceAndBlank] -->
+	// <!-- /meta[replaceAndBlank] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="0" with=["0","1"] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="3" with=["3","4","5","6","7"] -->
+	// <!-- meta[replace]: p="1.0" target="<=" with=["<","<="] -->
+		for (var i = 0 ; i <= 3 ; i++){
+	// <!-- /meta[replace] -->
+	// <!-- /meta[replaceAndBlank] -->
+	// <!-- /meta[replaceAndBlank] -->
+			document.write(i + "<br>");
+		}
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="0" with=["0","1"] -->
+	// <!-- meta[replace]: p="1.0" target="3" with=["3","4","5","6","7"] -->
+	// <!-- meta[replace]: p="1.0" target="<=" with=["<","<="] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="_A_" with=["1","2","3"] -->
+		for (var i = 0 ; i <= 3 ; i+=_A_){
+	// <!-- /meta[replaceAndBlank] -->
+	// <!-- /meta[replace] -->
+	// <!-- /meta[replace] -->
+	// <!-- /meta[replaceAndBlank] -->
+			document.write(i + "<br>");
+		}
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[replace]: p="1.0" target="0" with=["0","1"] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="3" with=["3","4","5","6","7"] -->
+	// <!-- meta[replace]: p="1.0" target=">=" with=[">",">="] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="_A_" with=["1","2","3"] -->
+		for (var i = 3 ; i >= 0 ; i-=_A_){
+	// <!-- /meta[replaceAndBlank] -->
+	// <!-- /meta[replace] -->
+	// <!-- /meta[replaceAndBlank] -->
+	// <!-- /meta[replace] -->
+			document.write(i + "<br>");
+		}
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+		// <!-- meta[select] -->
+			// <!-- meta[option] -->
+		var a = new Array("あ","い","う","え","お");
+			// <!-- /meta[option] -->
+			// <!-- meta[option] -->
+		var a = Array("あ","い","う","え","お");
+			// <!-- /meta[option] -->
+			// <!-- meta[option] -->
+		var a = ["あ","い","う","え","お"];
+			// <!-- /meta[option] -->
+		// <!-- /meta[select] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="0" with=["0","1","2"] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="3" with=["3","4"] -->
+	// <!-- meta[replace]: p="1.0" target="<=" with=["<","<="] -->
+		var i = 0;
+		while (i < 3){
+	// <!-- /meta[replace] -->
+	// <!-- /meta[replaceAndBlank] -->
+	// <!-- /meta[replaceAndBlank] -->
+			// <!-- meta[flip]: p="0.5" -->
+			// <!-- meta[element] -->
+			document.write(a[i] + "<br>");
+			// <!-- /meta[element] -->
+			// <!-- meta[element] -->
+			i++;
+			// <!-- /meta[element] -->
+			// <!-- /meta[flip] -->
+		}
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="0" with=["0","1"] -->
+	// <!-- meta[replace]: p="1.0" target="3" with=["3","4","5","6","7"] -->
+	// <!-- meta[replace]: p="1.0" target="<=" with=["<","<="] -->
+		var i = 0;
+		while (i <= 3){
+	// <!-- /meta[replaceAndBlank] -->
+	// <!-- /meta[replace] -->
+	// <!-- /meta[replace] -->
+			// <!-- meta[flip]: p="0.5" -->
+			// <!-- meta[element] -->
+			document.write(i + "<br>");
+			// <!-- /meta[element] -->
+			// <!-- meta[element] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="_A_" with=["1","2","3"] -->
+			i+=_A_;
+			// <!-- /meta[element] -->
+			// <!-- /meta[flip] -->
+	// <!-- /meta[replaceAndBlank] -->
+		}
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[replace]: p="1.0" target="0" with=["0","1"] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="3" with=["3","4","5","6","7"] -->
+	// <!-- meta[replace]: p="1.0" target=">=" with=[">",">="] -->
+		var i = 3 ;
+		while (i >= 0){
+	// <!-- /meta[replace] -->
+	// <!-- /meta[replaceAndBlank] -->
+	// <!-- /meta[replace] -->
+			// <!-- meta[flip]: p="0.5" -->
+			// <!-- meta[element] -->
+			// <!-- meta[replaceAndBlank]: p="1.0" target="_A_" with=["1","2","3"] -->
+			i-=_A_;			
+			// <!-- /meta[replaceAndBlank] -->
+			// <!-- /meta[element] -->
+			// <!-- meta[element] -->
+			document.write(i + "<br>");
+			// <!-- /meta[element] -->
+			// <!-- /meta[flip] -->
+		}
+// <!-- /meta[option] -->
+// <!-- /meta[select] -->
+	</script>
+</head>
+<body>
+</body>
+</html>

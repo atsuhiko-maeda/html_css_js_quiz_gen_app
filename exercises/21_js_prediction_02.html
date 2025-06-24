@@ -1,0 +1,43 @@
+<!-- meta[predictProgramExecution] /-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script>
+// <!-- meta[select] -->
+// <!-- meta[option] -->
+	// <!-- meta[replace]: p="0.7" target=["{","}"] with=[""] -->
+		// <!-- meta[replace]: p="1.0" target="0" with=["0","1"] -->
+			// <!-- meta[replace]: p="1.0" target="<=" with=["<","<="] -->
+	for (var i=0 ;i<=2; i++){
+			// <!-- /meta[replace] -->
+		// <!-- /meta[replace] -->
+			// <!-- meta[replace]: p="0.5" target="    " with=[""] -->
+	    document.write("a"+"<br>");
+			// <!-- /meta[replace] -->
+			// <!-- meta[replace]: p="0.5" target="    " with=[""] -->
+	    document.write("b"+"<br>");
+			// <!-- /meta[replace] -->
+	}
+		// <!-- /meta[replace] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[replace]: p="1.0" target="0" with=["1","2","3"] -->
+	var x=0;
+	// <!-- /meta[replace] -->
+	// <!-- meta[replace]: p="0.7" target=["{","}"] with=[""] -->
+		// <!-- meta[replace]: p="1.0" target="0" with=["1","2","3"] -->
+	if (x>0){
+		// <!-- /meta[replace] -->
+	    document.write("a"+"<br>");
+		// <!-- meta[replace]: p="0.5" target="    " with=[""] -->
+	    document.write("b"+"<br>");
+		// <!-- /meta[replace] -->
+	}
+	// <!-- /meta[replace] -->
+// <!-- /meta[option] -->
+// <!-- /meta[select] -->
+</script>
+</head>
+<body></body>
+</html>

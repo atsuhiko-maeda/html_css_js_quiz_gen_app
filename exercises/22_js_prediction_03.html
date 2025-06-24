@@ -1,0 +1,134 @@
+<!-- meta[predictProgramExecution] /-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script>
+// <!-- meta[select] -->
+// <!-- meta[option] -->
+	// <!-- meta[replace]: p="0.5" target=["{","}"] with=[""] -->
+	// <!-- meta[replace]: p="1.0" target="0" with=["0","1"] -->
+		// <!-- meta[replace]: p="1.0" target="<=2" with=["<2","<=2","<3","<=3"] -->
+			// <!-- meta[replace]: p="1.0" target="++" with=["+=1","+=2"] -->
+	for (var i=0 ;i<=2; i++){
+			// <!-- /meta[replace] -->
+		// <!-- /meta[replace] -->
+	// <!-- /meta[replace] -->
+		// <!-- meta[replace]: p="0.5" target="'a'" with=["i"] -->
+	    document.write('a'+"<br>");
+		// <!-- /meta[replace] -->
+	}
+	// <!-- /meta[replace] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	var i=0;
+	// <!-- meta[replace]: p="1.0" target="0" with=["0","1"] -->
+		// <!-- meta[replace]: p="1.0" target="<=2" with=["<2","<=2","<3","<=3"] -->
+	while (i<=2){
+		// <!-- /meta[replace] -->
+	// <!-- /meta[replace] -->
+		// <!-- meta[replace]: p="0.5" target="\"a\"" with=["i"] -->
+		document.write("a"+"<br>");
+		// <!-- /meta[replace] -->
+		// <!-- meta[replace]: p="1.0" target="++" with=["+=1","+=2"] -->
+		i++;
+		// <!-- /meta[replace] -->
+	}
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[replace]: p="1.0" target="0" with=["1","2","3","4","5","6","7","8","9"] -->
+	var x=0;
+	// <!-- /meta[replace] -->
+	// <!-- meta[replace]: p="0.5" target=["{","}"] with=[""] -->
+	// <!-- meta[replace]: p="1.0" target="0" with=["1","2","3","4","5","6","7","8","9"] -->
+	if (x<0){
+	// <!-- /meta[replace] -->
+	    document.write("a"+"<br>");
+	}
+	// <!-- meta[replace]: p="1.0" target="else if" with=["else if","if"] -->
+	// <!-- meta[replace]: p="1.0" target="0" with=["1","2","3","4","5","6","7","8","9"] -->
+	else if (0<x){
+	// <!-- /meta[replace] -->
+	// <!-- /meta[replace] -->
+	    document.write("b"+"<br>");
+	}
+	// <!-- meta[includeBlock]: p="1.0" -->
+	else {
+	    document.write("c"+"<br>");
+	}
+	// <!-- /meta[includeBlock] -->
+	// <!-- /meta[replace] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[replace]: p="1.0" target="0" with=["1","2","3","4","5","6","7","8","9"] -->
+	var x = 0;
+	var result="";
+	// <!-- /meta[replace] -->
+	// <!-- meta[replace]: p="0.5" target=["{","}"] with=[""] -->
+	// <!-- meta[replace]: p="1.0" target="0" with=["1","2","3","4","5","6","7","8","9"] -->
+	if (x<0){
+	// <!-- /meta[replace] -->
+		result="a";
+	}
+	// <!-- meta[replace]: p="1.0" target="else if" with=["else if","if"] -->
+	// <!-- meta[replace]: p="1.0" target="0" with=["1","2","3","4","5","6","7","8","9"] -->
+	else if (0<x){
+	// <!-- /meta[replace] -->
+	// <!-- /meta[replace] -->
+		result="b";
+	}
+	// <!-- meta[includeBlock]: p="1.0" -->
+	else {
+		result="c";
+	}
+	// <!-- /meta[includeBlock] -->
+	document.write(result);
+	// <!-- /meta[includeBlock] -->
+	// <!-- /meta[replace] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[replace]: p="1.0" target="0" with=["1","2","3","4","5","6","7","8","9"] -->
+	var x=0;
+	// <!-- /meta[replace] -->
+	// <!-- meta[replace]: p="1.0" target="_A_" with=["1","2","3"] -->
+	// <!-- meta[replace]: p="1.0" target="_B_" with=["5","6","7"] -->
+	if (x<_A_ || _B_<x){
+	// <!-- /meta[replace] -->
+	// <!-- /meta[replace] -->
+	    document.write("a"+"<br>");
+	}
+	// <!-- meta[includeBlock]: p="1.0" -->
+	else {
+	    document.write("b"+"<br>");
+	}
+	// <!-- /meta[includeBlock] -->
+	document.write("c"+"<br>");
+	// <!-- /meta[includeBlock] -->
+	// <!-- /meta[replace] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[replace]: p="1.0" target="0" with=["1","2","3","4","5","6","7","8","9"] -->
+	var x=0;
+	// <!-- /meta[replace] -->
+	// <!-- meta[replace]: p="1.0" target="_A_" with=["3","4","5"] -->
+	// <!-- meta[replace]: p="1.0" target="_B_" with=["6","7","8"] -->
+	if (x<_A_ && x<_B_){
+	// <!-- /meta[replace] -->
+	// <!-- /meta[replace] -->
+	    document.write("a"+"<br>");
+	    document.write("b"+"<br>");
+	}
+	// <!-- meta[includeBlock]: p="1.0" -->
+	else {
+	    document.write("c"+"<br>");
+	}
+	// <!-- /meta[includeBlock] -->
+	document.write("d"+"<br>");
+	// <!-- /meta[includeBlock] -->
+	// <!-- /meta[replace] -->
+// <!-- /meta[option] -->
+// <!-- /meta[select] -->
+</script>
+</head>
+<body></body>
+</html>

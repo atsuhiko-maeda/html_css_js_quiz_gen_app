@@ -1,0 +1,167 @@
+<!-- meta[select] -->
+<!-- meta[option] -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<script>
+//<!-- meta[blank]: p="1.0" candidates=["function func01()","\"func01()\""] -->
+//<!-- meta[replaceWord]: p="1.0" target="tool" with=["hoge","fuga","piyo"] -->
+//<!-- meta[replaceWord]: p="1.0" target="jsform" with=["foo","bar","baz"] -->
+//<!-- meta[replaceWord]: p="1.0" target="func01" with=["qux","quux","corge"] -->
+		function func01(){
+//<!-- meta[blank]: p="1.0" candidates=["selectedIndex","options"] -->
+			var n = document.jsform.tool.selectedIndex;
+			var v = document.jsform.tool.options[n].value;
+//<!-- /meta[blank] --> 
+//<!-- meta[blank]: p="1.0" candidates=["getElementById","innerHTML","output"] -->
+			document.getElementById("output").innerHTML=v;			
+//<!-- /meta[blank] --> 
+		}
+	</script>
+</head>
+<body>
+	<form name="jsform">
+<!-- meta[blank]: p="0.5" candidates=["select","option"] -->
+        <select name="tool"> 
+            <option value="A">オプションA</option> 
+            <option value="B">オプションB</option> 
+            <option value="C">オプションC</option> 
+        </select> 		
+		<input type="button" value="ボタン" onclick="func01()">
+<!-- /meta[blank] -->
+<!-- /meta[replaceWord] -->
+<!-- /meta[replaceWord] -->
+<!-- /meta[replaceWord] -->
+<!-- /meta[blank] --> 
+	</form>
+	<div id="output"></div>
+</body>
+</html>
+<!-- /meta[option] -->
+<!-- meta[option] -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<script>
+//<!-- meta[blank]: p="1.0" candidates=["function func01()","\"func01()\""] -->
+//<!-- meta[replaceWord]: p="1.0" target="tool" with=["hoge","fuga","piyo"] -->
+//<!-- meta[replaceWord]: p="1.0" target="jsform" with=["foo","bar","baz"] -->
+//<!-- meta[replaceWord]: p="1.0" target="func01" with=["qux","quux","corge"] -->
+		function func01(){
+//<!-- meta[blank]: p="1.0" candidates=["elements","checked"] -->
+			var str = "";
+			for (var i=0 ; i<3 ; i++){
+				if (document.jsform.elements[i].checked === true){
+					str=document.jsform.elements[i].value;
+					break;
+				}
+			}
+//<!-- /meta[blank] --> 
+//<!-- meta[blank]: p="1.0" candidates=["getElementById","innerHTML","output"] -->
+			document.getElementById("output").innerHTML=str;			
+//<!-- /meta[blank] --> 
+		}
+	</script>
+</head>
+<body>
+	<form name="jsform">
+<!-- meta[blank]: p="0.5" candidates=["radio","input"] -->
+		<input type="radio" name="tool" value="A">Item A
+		<input type="radio" name="tool" value="B">Item B
+		<input type="radio" name="tool" value="C">Item C
+<!-- /meta[blank] -->
+		<br>
+		<input type="button" value="ボタン" onclick="func01()">
+<!-- /meta[replaceWord] -->
+<!-- /meta[replaceWord] -->
+<!-- /meta[replaceWord] -->
+<!-- /meta[blank] --> 
+	</form>
+	<div id="output"></div>
+</body>
+</html>
+<!-- /meta[option] -->
+<!-- meta[option] -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<script>
+//<!-- meta[blank]: p="1.0" candidates=["function func01()","\"func01()\""] -->
+//<!-- meta[replaceWord]: p="1.0" target="tool" with=["hoge","fuga","piyo"] -->
+//<!-- meta[replaceWord]: p="1.0" target="jsform" with=["foo","bar","baz"] -->
+//<!-- meta[replaceWord]: p="1.0" target="func01" with=["qux","quux","corge"] -->
+		function func01(){
+//<!-- meta[blank]: p="1.0" candidates=["selectedIndex","options"] -->
+			var n = document.jsform.tool.selectedIndex;
+			var v = document.jsform.tool.options[n].value;
+//<!-- /meta[blank] --> 
+//<!-- meta[blank]: p="1.0" candidates=["getElementById","innerHTML","output"] -->
+			document.getElementById("output").innerHTML=v;			
+//<!-- /meta[blank] --> 
+		}
+	</script>
+</head>
+<body>
+	<form name="jsform">
+<!-- meta[blank]: p="0.5" candidates=["select","option"] -->
+        <select name="tool" size="1" > 
+            <option value="A">オプションA</option> 
+            <option value="B">オプションB</option> 
+            <option value="C">オプションC</option> 
+        </select> 		
+		<input type="button" value="ボタン" onclick="func01()">
+<!-- /meta[blank] -->
+<!-- /meta[replaceWord] -->
+<!-- /meta[replaceWord] -->
+<!-- /meta[replaceWord] -->
+<!-- /meta[blank] --> 
+	</form>
+	<div id="output"></div>
+</body>
+</html>
+<!-- /meta[option] -->
+<!-- meta[option] -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<script>
+//<!-- meta[blank]: p="1.0" candidates=["function func01()","\"func01()\""] -->
+//<!-- meta[replaceWord]: p="1.0" target="tool" with=["hoge","fuga","piyo"] -->
+//<!-- meta[replaceWord]: p="1.0" target="jsform" with=["foo","bar","baz"] -->
+//<!-- meta[replaceWord]: p="1.0" target="func01" with=["qux","quux","corge"] -->
+		function func01(){
+//<!-- meta[blank]: p="1.0" candidates=["elements","checked"] -->
+			var str = "";
+			for (var i=0 ; i<3 ; i++){
+				if (document.jsform.elements[i].checked === true){
+					str+=document.jsform.elements[i].value+" ";
+				}
+			}
+//<!-- /meta[blank] --> 
+//<!-- meta[blank]: p="1.0" candidates=["getElementById","innerHTML","output"] -->
+			document.getElementById("output").innerHTML=str;			
+//<!-- /meta[blank] --> 
+		}
+	</script>
+</head>
+<body>
+	<form name="jsform">
+<!-- meta[blank]: p="0.5" candidates=["checkbox","input"] -->
+		<input type="checkbox" name="tool" value="A">Item A
+		<input type="checkbox" name="tool" value="B">Item B
+		<input type="checkbox" name="tool" value="C">Item C
+<!-- /meta[blank] -->
+		<br>
+		<input type="button" value="ボタン" onclick="func01()">
+<!-- /meta[replaceWord] -->
+<!-- /meta[replaceWord] -->
+<!-- /meta[replaceWord] -->
+<!-- /meta[blank] --> 
+	</form>
+	<div id="output"></div>
+</body>
+</html>
+<!-- /meta[option] -->
+<!-- /meta[select] -->
+
+

@@ -1,0 +1,27 @@
+<!-- meta[predictProgramExecution] /-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script>
+	var a = ["あ","い","う","え","お"];
+	var i = 0;
+	// <!-- meta[replace]: p="1.0" target="'" with=["\"","'"] -->
+	var str = 'あ';
+	// <!-- /meta[replace] -->
+	function func01(){
+	// <!-- meta[replace]: p="1.0" target=["{","}"] with=[""] -->
+		for(var i=0 ;i<3 ;i++){
+			document.write(a[i] + "<br>");
+		}
+	// <!-- /meta[replace] -->
+	}
+	func01();
+</script>
+</head>
+<body>
+<!-- meta[replace]: p="1.0" target="\"func01()\"" with=["\"func03()\"","\"func02()\""] -->
+<button onclick="func01()">ボタン</button>
+<!-- /meta[replace] -->
+</body>
+</html>

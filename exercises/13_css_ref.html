@@ -1,0 +1,70 @@
+<!-- meta[replace]: target="pink" with=["pink","plum","rosyBrown","skyBlue","turquoise"] -->
+<!-- meta[replace]: target="インナーA" with=["そば","うどん","ラーメン","焼きそば","お好み焼き"] -->
+<!-- meta[replace]: target="インナーB" with=["シーザーサラダ","おひたし","おでん","漬物","ザーサイ"] -->
+<!-- meta[replace]: target="インナーC" with=["コンソメスープ","お吸い物","味噌汁","オレンジジュース","お茶"] -->
+<!-- meta[replace]: target="background-color" with=["color","background-color"] -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>タイトル</title>
+<!-- meta[select] --> 
+<!-- meta[option] --> 
+	<style>
+	/* <!-- meta[blank]: candidates=["#my_style", "id=\"my_style\""] --> */
+	/* <!-- meta[replace]: target="my_style" with=["my_style1","style01","coloring"] --> */
+		#my_style {
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div id="my_style">インナーA</div>
+	<!-- /meta[replace] -->
+	<!-- /meta[blank] -->
+	<div>インナーB</div>
+	<div>インナーC</div>
+</body>
+</html>
+<!-- /meta[option] --> 
+<!-- meta[option] --> 
+	<style>
+	/* <!-- meta[blank]: candidates=[".my_style","class=\"my_style\""] --> */
+	/* <!-- meta[replace]: target="my_style" with=["my_style","style01","coloring"] --> */
+		.my_style {
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="my_style">インナーA</div>
+	<div>インナーB</div>
+	<div class="my_style">インナーC</div>
+		<!-- /meta[replace] -->
+		<!-- /meta[blank] -->
+</body>
+</html>
+<!-- /meta[option] --> 
+<!-- meta[option] --> 
+	<style>
+	/* <!-- meta[blank]: candidates=["_A_","_B_"] --> */
+	/* <!-- meta[replaceWord]: target=["_A_","_B_"] with=["p","h2","span","button","h1"] --> */
+		_A_ {
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<_B_>インナーA</_B_>
+	<_B_>インナーB</_B_>
+	<!-- /meta[replaceWord] -->	
+	<!-- /meta[blank] -->
+</body>
+</html>
+<!-- /meta[option] --> 
+<!-- /meta[select] -->
+<!-- /meta[replace] -->	
+<!-- /meta[replace] -->	
+<!-- /meta[replace] -->	
+<!-- /meta[replace] -->	
+<!-- /meta[replace] -->	

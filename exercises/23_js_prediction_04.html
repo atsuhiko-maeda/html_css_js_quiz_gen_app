@@ -1,0 +1,170 @@
+<!-- meta[predictProgramExecution] /-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<script>
+// <!-- meta[replace]: p="1.0" target="foo" with=["foo","bar","baz"] -->
+// <!-- meta[replace]: p="1.0" target="tool" with=["hoge","fuga","piyo"] -->
+// <!-- meta[select] -->
+// <!-- meta[option] -->
+	function foo(x,y){
+		var z = x+y;
+		document.write(z+"<br>");
+	}
+	
+	foo(1,2);
+	// <!-- meta[includeBlock]: p="0.5" -->
+	foo(1,2);
+	// <!-- /meta[includeBlock] -->
+	// <!-- meta[includeBlock]: p="0.5" -->
+	foo(1,2);
+	// <!-- /meta[includeBlock] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	function hoge(x){
+		return x*2;
+	}
+
+	function foo(x,y){
+	// <!-- meta[replace]: p="1.0" target="<=" with=[">=",">","<","<="] -->
+		if (x<=y)
+	// <!-- /meta[replace] -->
+			return hoge(x);
+		else
+			return hoge(y);
+	}
+
+		// <!-- meta[select] -->
+			// <!-- meta[option] -->
+				// <!-- meta[replace]: p="1.0" target="1" with=["1","2","3"] -->
+				// <!-- meta[replace]: p="1.0" target="tool" with=["1","2","3"] -->
+	var x = 1, y = 2;
+				// <!-- /meta[replace] -->
+				// <!-- /meta[replace] -->
+	var z = foo(x,y);
+	document.write(z);
+			// <!-- /meta[option] -->
+			// <!-- meta[option] -->
+	var x = 1, y = 2;
+	document.write(foo(x,y));
+			// <!-- /meta[option] -->
+		// <!-- /meta[select] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	function foo(x){
+		var s=0;
+		for (var i=0 ; i<x.length ; i++){
+			if (x[i]%2==0){
+				s++;
+			}		
+		}
+		return s;
+	}
+
+	// <!-- meta[replace]: p="0.5" target="1,2,3,4" with=["0,1,2,3"] -->
+		// <!-- meta[select] -->
+			// <!-- meta[option] -->
+	document.write(foo([1,2,3,4]));
+			// <!-- /meta[option] -->
+			// <!-- meta[option] -->
+	var a = [1,2,3,4];
+	document.write(foo(a));
+			// <!-- /meta[option] -->
+		// <!-- /meta[select] -->
+	// <!-- /meta[replace] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	function foo(x){
+		var s=0;
+		for (var i=0 ; i<x.length ; i++){
+			s+=x[i];
+		}
+		s/=x.length;
+		return s;
+	}
+
+	// <!-- meta[replace]: p="0.5" target="1,2,3,4" with=["0,1,2,3"] -->
+		// <!-- meta[select] -->
+			// <!-- meta[option] -->
+	document.write(foo([1,2,3,4]));
+			// <!-- /meta[option] -->
+			// <!-- meta[option] -->
+	var a = [1,2,3,4];
+	document.write(foo(a));
+			// <!-- /meta[option] -->
+		// <!-- /meta[select] -->
+	// <!-- /meta[replace] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	function foo(x){
+		var s=0;
+		for (var i=0 ; i<x.length ; i++){
+			if (x[i]%2==0 && x[i]%3==0)
+				s++;				
+		}
+		return s;
+	}
+
+	// <!-- meta[replace]: p="0.5" target="1,2,3,4" with=["3,4,5,6"] -->
+		// <!-- meta[select] -->
+			// <!-- meta[option] -->
+	document.write(foo([1,2,3,4]));
+			// <!-- /meta[option] -->
+			// <!-- meta[option] -->
+	var a = [1,2,3,4];
+	document.write(foo(a));
+			// <!-- /meta[option] -->
+		// <!-- /meta[select] -->
+	// <!-- /meta[replace] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	function foo(x){
+		var s=0;
+		for (var i=0 ; i<x.length ; i++){
+			if (x[i]%2==0)
+				if (x[i]%3==0)
+					s+=x[i];				
+		}
+		return s;
+	}
+
+	// <!-- meta[replace]: p="0.5" target="1,2,3,4" with=["3,4,5,6"] -->
+		// <!-- meta[select] -->
+			// <!-- meta[option] -->
+	document.write(foo([1,2,3,4]));
+			// <!-- /meta[option] -->
+			// <!-- meta[option] -->
+	var a = [1,2,3,4];
+	document.write(foo(a));
+			// <!-- /meta[option] -->
+		// <!-- /meta[select] -->
+	// <!-- /meta[replace] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	function foo(x){
+		for (var i=0 ; i<x.length ; i++){
+				x[i]=x[i]*2;				
+		}
+		return x;
+	}
+
+	// <!-- meta[replace]: p="0.5" target="1,2,3,4" with=["0,1,2,3"] -->
+		// <!-- meta[select] -->
+			// <!-- meta[option] -->
+	document.write(foo([1,2,3,4]));
+			// <!-- /meta[option] -->
+			// <!-- meta[option] -->
+	var a = [1,2,3,4];
+	document.write(foo(a));
+			// <!-- /meta[option] -->
+		// <!-- /meta[select] -->
+	// <!-- /meta[replace] -->
+// <!-- /meta[option] -->
+// <!-- /meta[select] -->
+// <!-- /meta[replace] -->
+// <!-- /meta[replace] -->
+</script>
+</head>
+<body></body>
+</html>

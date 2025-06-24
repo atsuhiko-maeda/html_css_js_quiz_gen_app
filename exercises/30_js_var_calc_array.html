@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>タイトル</title>
+	<script>
+// <!-- meta[select] -->
+// <!-- meta[option] -->
+		// <!-- meta[blank]: p="1.0" candidates=["var",";","write"] -->
+		// <!-- meta[replaceWord]: p="1.0" target="x" with=["a","x","i"] -->
+		var x = 0;
+		x+=2;
+		document.write(x);
+		// <!-- /meta[replaceWord] -->
+		// <!-- /meta[blank] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+		// <!-- meta[replaceWord]: p="1.0" target="1" with=["1","2","3"] -->
+		// <!-- meta[replaceWord]: p="1.0" target="2" with=["4","5","6"] -->
+		var x = 1;
+		var y = "2.3";
+		// <!-- meta[select] -->
+		// <!-- meta[option] -->
+		// <!-- meta[replaceAndBlank]: p="1.0" target="+" with=["+parseInt","+parseFloat"] -->
+		var z = x+(y);
+		// <!-- /meta[replaceAndBlank] -->
+		// <!-- /meta[option] -->
+		// <!-- meta[option] -->
+		// <!-- meta[blank]: p="1.0" candidates=["+"] -->
+		var z = x+y;
+		// <!-- /meta[blank] -->
+		// <!-- /meta[option] -->
+		// <!-- /meta[select] -->
+		document.write(z);
+		// <!-- /meta[replaceWord] -->
+		// <!-- /meta[replaceWord] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+		// <!-- meta[replaceWord]: p="1.0" target="1" with=["1","2","3"] -->
+		var x = 1;
+		// <!-- /meta[replaceWord] -->
+		// <!-- meta[includeBlock]: p="0.5" -->
+		x++;
+		// <!-- /meta[includeBlock] -->
+		// <!-- meta[includeBlock]: p="0.5" -->
+		x--;
+		// <!-- /meta[includeBlock] -->
+		// <!-- meta[includeBlock]: p="0.5" -->
+		x++;
+		// <!-- /meta[includeBlock] -->
+		// <!-- meta[replaceAndBlank]: p="1.0" target="+=" with=["-=","+=","*="] -->
+		// <!-- meta[replace]: p="1.0" target="2" with=["2","3"] -->
+		x+=2;
+		// <!-- /meta[replace] -->
+		// <!-- /meta[replaceAndBlank] -->
+		document.write(x);
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+		var s1 = "あいうえお";
+		var s2 = "かきくけこ";
+		var ss = s1+s2;
+		// <!-- meta[replaceAndBlank]: p="1.0" target="1" with=["0","1","2","3","4","5","6","7","8","9"] -->
+		document.write(ss[1]+"<br>");
+		// <!-- /meta[replaceAndBlank] -->
+		// <!-- meta[blank]: p="1.0" candidates=[".length"] -->
+		document.write("文字列の長さ:"+ss.length);
+		// <!-- /meta[blank] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+		// <!-- meta[select] -->
+			// <!-- meta[option] -->
+	// <!-- meta[blank]: p="1.0" candidates=["new","Array"] -->
+	// <!-- meta[blank]: p="1.0" candidates=["("] -->
+	// <!-- meta[blank]: p="1.0" candidates=[")"] -->
+	var a = new Array("あ","い","う","え","お");//コンストラクタで作成
+	// <!-- /meta[blank] -->
+	// <!-- /meta[blank] -->
+	// <!-- /meta[blank] -->
+			// <!-- /meta[option] -->
+			// <!-- meta[option] -->
+	// <!-- meta[blank]: p="1.0" candidates=["("] -->
+	// <!-- meta[blank]: p="1.0" candidates=[")"] -->
+	var a = Array("あ","い","う","え","お");//関数で作成
+	// <!-- /meta[blank] -->
+	// <!-- /meta[blank] -->
+			// <!-- /meta[option] -->
+			// <!-- meta[option] -->
+	// <!-- meta[blank]: p="1.0" candidates=["\]"] -->
+	// <!-- meta[blank]: p="1.0" candidates=["\["] -->
+	var a = ["あ","い","う","え","お"];//リテラル記法で作成
+	// <!-- /meta[blank] -->
+	// <!-- /meta[blank] -->
+			// <!-- /meta[option] -->
+		// <!-- /meta[select] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="1" with=["0","1","2","3","4"] -->
+	document.write(a[1]+"<br>");
+	// <!-- /meta[replaceAndBlank] -->
+	// <!-- meta[blank]: p="1.0" candidates=[".length"] -->
+	document.write("aの長さ:"+a.length);
+	// <!-- /meta[blank] -->
+// <!-- /meta[option] -->
+// <!-- /meta[select] -->
+</script>
+</head>
+<body>
+</body>
+</html>
