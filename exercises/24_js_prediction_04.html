@@ -22,6 +22,21 @@
 	// <!-- /meta[includeBlock] -->
 // <!-- /meta[option] -->
 // <!-- meta[option] -->
+	function foo(x,y){
+		if (x>y)
+			return x;
+		else
+			return y;
+	}
+	
+// <!-- meta[replace]: p="1.0" target="3" with=["3","1","-1"] -->
+// <!-- meta[replace]: p="1.0" target="4" with=["1","2","-1"] -->
+	var z= foo(foo(1,2),foo(3,4));
+// <!-- /meta[replace] -->	
+// <!-- /meta[replace] -->	
+	document.write(z);
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
 	function hoge(x){
 		return x*2;
 	}
@@ -39,10 +54,10 @@
 			// <!-- meta[option] -->
 				// <!-- meta[replace]: p="1.0" target="1" with=["1","2","3"] -->
 				// <!-- meta[replace]: p="1.0" target="tool" with=["1","2","3"] -->
-	var x = 1, y = 2;
+	var x = 1, y = 2, z;
 				// <!-- /meta[replace] -->
 				// <!-- /meta[replace] -->
-	var z = foo(x,y);
+	z = foo(x,y);
 	document.write(z);
 			// <!-- /meta[option] -->
 			// <!-- meta[option] -->

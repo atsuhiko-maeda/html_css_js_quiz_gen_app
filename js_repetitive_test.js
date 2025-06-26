@@ -249,7 +249,7 @@ function quizModeChange(){
             <div style="display: flex; gap: 10px;height:95%">
                 <div style="flex: 2;padding: 10px 10px; border: 2px solid #ccc;background:white;border-radius: 10px;">
                     <h4>ソースコード:</h4>
-                    <div id="html-source" style="white-space: pre-wrap;;max-height:400px;overflow-y:auto;"></div>
+                    <div id="html-source" style="white-space: pre-wrap;overflow-y:auto;"></div>
                 </div>
                 <div style="flex: 1;padding: 10px 10px; border: 2px solid #ccc;background:white;border-radius: 10px;">
                     <h4>予想される表示結果:</h4>
@@ -274,7 +274,7 @@ function quizModeChange(){
                 </div>
                 <div style="flex: 2;padding: 10px 10px; border: 2px solid #ccc;background:white;border-radius: 10px;">
                     <h4>ソースコード:</h4>
-                    <div id="html-source" style="white-space: pre-wrap;;max-height:400px;overflow-y:auto;"></div>
+                    <div id="html-source" style="white-space: pre-wrap;max-height:95%;overflow-y:auto;"></div>
                 </div>
             </div>`;
 

@@ -99,8 +99,48 @@
 	document.write("aの長さ:"+a.length);
 	// <!-- /meta[blank] -->
 // <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[flip]: p=0.5 -->
+	// <!-- meta[blank]: p="1.0" candidates=["new","Array"] -->
+	// <!-- meta[blank]: p="1.0" candidates=["("] -->
+	// <!-- meta[blank]: p="1.0" candidates=[")"] -->
+	var a = new Array("あ","い","う","え","お");//コンストラクタで作成
+	// <!-- /meta[blank] -->
+	// <!-- /meta[blank] -->
+	// <!-- /meta[blank] -->
+	// <!-- meta[blank]: p="1.0" candidates=["("] -->
+	// <!-- meta[blank]: p="1.0" candidates=[")"] -->
+	var b = Array("あ","い","う","え","お");//関数で作成
+	// <!-- /meta[blank] -->
+	// <!-- /meta[blank] -->
+	// <!-- meta[blank]: p="1.0" candidates=["\]"] -->
+	// <!-- meta[blank]: p="1.0" candidates=["\["] -->
+	var c = ["あ","い","う","え","お"];//リテラル記法で作成
+	// <!-- /meta[blank] -->
+	// <!-- /meta[blank] -->
+	// <!-- /meta[flip] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="1" with=["0","1","2","3","4"] -->
+	document.write(a[1]+"<br>");
+	// <!-- /meta[replaceAndBlank] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="1" with=["0","1","2","3","4"] -->
+	document.write(b[1]+"<br>");
+	// <!-- /meta[replaceAndBlank] -->
+	// <!-- meta[replaceAndBlank]: p="1.0" target="1" with=["0","1","2","3","4"] -->
+	document.write(c[1]+"<br>");
+	// <!-- /meta[replaceAndBlank] -->
+	// <!-- /meta[replaceAndBlank] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+// <!-- meta[blank]: p="1.0" candidates=["Math","PI"] -->
+	document.write(Math.PI+"<br>");
+// <!-- /meta[blank] -->
+// <!-- meta[blank]: p="1.0" candidates=["new","Date","getFullYear"] -->
+	var d = new Date();
+	document.write(d.getFullYear()+"<br>");
+// <!-- /meta[blank] -->
+// <!-- /meta[option] -->
 // <!-- /meta[select] -->
-</script>
+	</script>
 </head>
 <body>
 </body>

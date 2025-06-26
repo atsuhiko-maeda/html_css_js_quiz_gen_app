@@ -215,7 +215,7 @@ class HTMLMetaParser {
                     }
                 }
                 if (!found) {
-                    this.errors.push(`No matching open tag for close tag: ${command.command}`);
+                    this.errors.push(`No matching open tag for close tag: ${command.raw}`);
                 }
             } else if (command.type === 'self-closing') {
                 // 自己完結型

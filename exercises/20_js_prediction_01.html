@@ -7,9 +7,24 @@
 // <!-- meta[select] -->
 // <!-- meta[option] -->
 	// <!-- meta[replaceWord]: p="1.0" target="x" with=["a","x","i"] -->
+	// <!-- meta[replaceWord]: p="1.0" target="0" with=["0","1","2"] -->
+	// <!-- meta[replaceWord]: p="1.0" target="2" with=["0","1","2"] -->
+	// <!-- meta[replaceWord]: p="1.0" target="+=" with=["+=","-=","*="] -->
 	var x = 0;
 	x+=2;
 	document.write(x);
+	// <!-- /meta[replaceWord] -->
+	// <!-- /meta[replaceWord] -->
+	// <!-- /meta[replaceWord] -->
+	// <!-- /meta[replaceWord] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[replaceWord]: p="1.0" target="x" with=["a","x","i"] -->
+	// <!-- meta[replaceWord]: p="1.0" target="2" with=["2","3"] -->
+	var x = 0;
+	x = x%2;
+	document.write(x);
+	// <!-- /meta[replaceWord] -->
 	// <!-- /meta[replaceWord] -->
 // <!-- /meta[option] -->
 // <!-- meta[option] -->
@@ -45,30 +60,32 @@
 	document.write(x);
 // <!-- /meta[option] -->
 // <!-- meta[option] -->
-	var s1 = "aiueo";
-	var s2 = "AIUEO";
-	var ss = s1+s2;
-	// <!-- meta[replace]: p="1.0" target="1" with=["0","1","2","3","4","5","6","7","8","9"] -->
-	document.write(ss[1]+"<br>");
+	// <!-- meta[replace]: p="1.0" target="1" with=["1","2","3"] -->
+	// <!-- meta[replace]: p="1.0" target="2" with=["2","3","4"] -->
+	var x = 1;
+	var y = 2;
 	// <!-- /meta[replace] -->
-	document.write(ss.length);
+	// <!-- /meta[replace] -->
+	var z = x+"+"+y;
+	document.write(z+"<br>");
 // <!-- /meta[option] -->
 // <!-- meta[option] -->
-	// <!-- meta[select] -->
-		// <!-- meta[option] -->
-var a = new Array("a","i","u","e","o");
-		// <!-- /meta[option] -->
-		// <!-- meta[option] -->
-var a = Array("a","i","u","e","o");
-		// <!-- /meta[option] -->
-		// <!-- meta[option] -->
-var a = ["a","i","u","e","o"];
-		// <!-- /meta[option] -->
-	// <!-- /meta[select] -->
-// <!-- meta[replace]: p="1.0" target="1" with=["0","1","2","3","4"] -->
-document.write(a[1]+"<br>");
-// <!-- /meta[replace] -->
-document.write(a.length);
+	var x = "aiueo";
+	var y = "AIUEO";
+	var z = x+y;
+	// <!-- meta[replace]: p="1.0" target="1" with=["0","1","2","3","4","5","6","7","8","9"] -->
+	document.write(z[1]+"<br>");
+	// <!-- /meta[replace] -->
+	document.write(z.length);
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[replace]: p="1.0" target="1" with=["1","2","3","4","5"] -->
+	// <!-- meta[replace]: p="1.0" target="++" with=["++","--"] -->
+	var n=1;
+	n = n++;
+	// <!-- /meta[replace] -->
+	// <!-- /meta[replace] -->
+	document.write(n+"<br>");
 // <!-- /meta[option] -->
 // <!-- /meta[select] -->
 </script>
