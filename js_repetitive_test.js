@@ -53,6 +53,12 @@ function init(){
 
     document.querySelector("#nextQuestion").addEventListener('click', parseMetaComments);
     document.querySelector("#getScoreLog").addEventListener('click', getScoreLog);
+
+    let str="";
+    for (let i=0 ; i<100 ; i++)
+        str+="aaaa\n";
+    
+    document.getElementById("score_log").innerHTML = str;
 }
 
 function setMaterial(){
