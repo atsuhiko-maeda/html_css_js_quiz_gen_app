@@ -8,6 +8,60 @@
 // <!-- meta[replace]: p="1.0" target="tool" with=["hoge","fuga","piyo"] -->
 // <!-- meta[select] -->
 // <!-- meta[option] -->
+	// <!-- meta[select] -->
+	// <!-- meta[option] -->
+	var s=0;
+	function foo(){
+		var a=0;
+	// <!-- /meta[option] -->
+	// <!-- meta[option] -->
+	var s=a=0;
+	function foo(){
+	// <!-- /meta[option] -->
+	// <!-- /meta[select] -->
+		// <!-- meta[replace]: p="1.0" target="++" with=["++","--"] -->
+		a++;
+		// <!-- /meta[replace] -->
+		s=a;
+	}
+
+	foo();
+	foo();
+	// <!-- meta[includeBlock]: p="0.5" -->
+	foo();
+	// <!-- /meta[includeBlock] -->
+	document.write(s);
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
+	// <!-- meta[select] -->
+	// <!-- meta[option] -->
+	function foo(x,y){
+		var z = x+y;
+		document.write(z+"<br>");
+	}
+	// <!-- /meta[option] -->
+	// <!-- meta[option] -->
+	function foo(x,y){
+		if (x>y)
+			return x;
+		else
+			return y;
+	}
+	// <!-- /meta[option] -->
+	// <!-- meta[option] -->
+	function foo(x){
+		var s=0;
+		for (var i=0 ; i<x.length ; i++){
+			if (x[i]%2==0){
+				s++;
+			}		
+		}
+		return s;
+	}
+	// <!-- /meta[option] -->
+	// <!-- /meta[select] -->
+// <!-- /meta[option] -->
+// <!-- meta[option] -->
 	function foo(x,y){
 		var z = x+y;
 		document.write(z+"<br>");

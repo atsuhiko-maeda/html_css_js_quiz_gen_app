@@ -15,16 +15,16 @@
         "exercises":{
             "20 算術演算":"20_js_prediction_01.html",
             "22 コードブロック":"22_js_prediction_02.html",
-            "23 if, while, for，配列":"23_js_prediction_03.html",
+            "23 if, while, for, 配列":"23_js_prediction_03.html",
             "24 関数":"24_js_prediction_04.html"
             }
      },
     {
         "chapter":"Javascript穴埋め",
         "exercises":{
-            "30 算術計算, 配列，object":"30_js_var_calc_array.html",
-            "32 if文, 比較演算":"31_js_if_comparison.html",
-            "33 for/while文":"32_js_for_while.html"
+            "30 算術演算, 配列, object":"30_js_var_calc_array.html",
+            "31 if文, 比較演算":"31_js_if_comparison.html",
+            "32 for/while文":"32_js_for_while.html"
         	}
     }
 ]
