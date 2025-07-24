@@ -210,7 +210,8 @@ function getScoreLog() {
     }
     
     // ファイル名を取得（空の場合はデフォルト名を使用）
-    let fileName = 'score_log.txt';
+    const today = new Date().toISOString().slice(0, 10).replace(/-/g, '');
+    let fileName = 'score_log_'+today+'.txt';
         
     // Blobオブジェクトとしてテキストデータを作成
     // UTF-8エンコーディングで日本語も正しく保存
