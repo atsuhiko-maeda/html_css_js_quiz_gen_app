@@ -28,31 +28,31 @@ let quizMode = 'fill_in';
 
 function init(){
 
-    // JSONファイルを取得して表示
-    fetch("exercises.json")
-        .then( response => response.json())
-        .then( data => {
-            const exercises = document.querySelector("#exercises");
+    // // JSONファイルを取得して表示
+    // fetch("exercises.json")
+    //     .then( response => response.json())
+    //     .then( data => {
+    //         const exercises = document.querySelector("#exercises");
 
-            data.forEach(item => {
+    //         data.forEach(item => {
 
-                const optgroup = document.createElement('optgroup');
-                optgroup.label=item.chapter;
-                for(const key in item.exercises){
-                    const option = document.createElement('option');
-                    option.value=item.exercises[key];
-                    option.textContent=key;
+    //             const optgroup = document.createElement('optgroup');
+    //             optgroup.label=item.chapter;
+    //             for(const key in item.exercises){
+    //                 const option = document.createElement('option');
+    //                 option.value=item.exercises[key];
+    //                 option.textContent=key;
 
-                    optgroup.appendChild(option);    
-                }
-                exercises.appendChild(optgroup);
-            });
-        });
+    //                 optgroup.appendChild(option);    
+    //             }
+    //             exercises.appendChild(optgroup);
+    //         });
+    //     });
 
-    quizModeChange();
+    // quizModeChange();
 
-    document.querySelector("#nextQuestion").addEventListener('click', parseMetaComments);
-    document.querySelector("#getScoreLog").addEventListener('click', getScoreLog);
+    // document.querySelector("#nextQuestion").addEventListener('click', parseMetaComments);
+    // document.querySelector("#getScoreLog").addEventListener('click', getScoreLog);
 }
 
 function setMaterial(){
