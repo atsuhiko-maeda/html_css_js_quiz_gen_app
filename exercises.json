@@ -3,6 +3,7 @@
         "chapter":"HTML/CSS/JS穴埋め",
         "exercises":{
             "10 HTMLタグ1(空欄少なめ)":"10_html_tag01_Lv1.html",
+            "10 HTMLタグ1(空欄少なめ)_test":"10_html_tag01_Lv1_test.html",
             "11 HTMLタグ1(空欄多め)":"11_html_tag01_Lv2.html",
             "12 HTMLタグ2":"12_html_tag02.html",
             "13 CSSの参照規則":"13_css_ref.html",
